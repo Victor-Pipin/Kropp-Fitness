@@ -270,3 +270,85 @@ button {
 .button:hover {
   background-color: var(--color-light-gray);
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Чтобы при уменьшении элементы не слипались */
+  column-gap: 20px;
+  padding-inline: 32px;
+  background-color: var(--color-dark-alternate);
+}
+
+.header-logo {
+  /* Чтобы картинка не искажалась при масшатбировани. */
+  flex-shrink: 0;
+}
+
+.header-menu-list {
+  display: flex;
+  /* При уменьшении экрана элементы списка смещаются друг под друга. */
+  flex-wrap: wrap;
+  column-gap: 50px;
+}
+
+.header-menu-link {
+  /* Чтобы применилась высота в 90px к (inline) элементу, добавляю: (inline-flex) */
+  display: inline-flex;
+  align-items: center;
+  column-gap: 7px;
+  height: 90px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+.header-menu-link.is-current::after {
+  content: "";
+  width: 5px;
+  /* Когда высота и ширина одинаковые, при адаптиве, чтобы гарантированно правильно изменялись
+  пропорции вместо свойства height использую aspect-ratio: 1;
+  height: 5px; */
+  aspect-ratio: 1;
+  /* Наследование цвета от оригинального элемента */
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.header-actions {
+  display: flex;
+  /* Боковое расстояние между элементами */
+  column-gap: 40px;
+}
+
+.header-burger-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4px;
+  width: 40px;
+  /* Когда высота и ширина одинаковые, при адаптиве, чтобы гарантированно правильно изменялись
+  пропорции вместо свойства height использую aspect-ratio: 1;
+  height: 40px; */
+  aspect-ratio: 1;
+  padding-left: 8px;
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+}
+
+.header-burger-button:hover {
+  color: var(--color-light-gray);
+  border-color: currentColor;
+}
+
+.header-burger-button-line {
+  width: 6px;
+  height: 1px;
+  background-color: currentColor;
+  box-shadow: 16px 0 0 currentColor;
+}
