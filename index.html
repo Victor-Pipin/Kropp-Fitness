@@ -59,6 +59,40 @@
        <!-- По макету элемента h1 нет, для CEO создаю h1 и скрываю при помощи
        утилитарного класса visually-hidden -->
       <h1 class="visually-hidden">Cross Fitness Club</h1>
+
+      <section class="banner">
+        <!-- По макету элемента h2 нет, для CEO создаю h2, и скрываю при помощи
+            утилитарного класса visually-hidden. У каждой секции должен быть свой заголовок уровня h2,
+           в котором содержится информация о содержимом блока (о чём секция) -->
+        <h2 class="visually-hidden">Upcoming events</h2>
+
+        <div class="banner-body">
+          <div class="banner-info">
+            New event<br />
+            <!-- Добавляю символ непрырывного пробела - &nbsp; напрямую,
+            для того чтобы во флекс контейнере отработали пробелы -->
+            coming up / <time datetime="06-07">june 7</time>&nbsp;-&nbsp;
+            <time datetime="06-13">13</time>
+          </div>
+          <h3 class="banner-title">Crossfit</h3>
+        </div>
+        <div class="banner-pagination">
+          <ul class="banner-pagination-list">
+            <li class="banner-pagination-item">
+              <button class="banner-pagination-button" type="button"></button>
+            </li>
+            <li class="banner-pagination-item">
+              <button class="banner-pagination-button" type="button"></button>
+            </li>
+            <li class="banner-pagination-item">
+              <button
+                class="banner-pagination-button is-current"
+                type="button"
+              ></button>
+            </li>
+          </ul>
+        </div>
+      </section>
       </main>
 </body>
 </html>
