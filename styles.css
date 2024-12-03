@@ -373,19 +373,16 @@ button {
   /* Добавляю родителю display: flex, для того чтобы отобразился псевдоэлемент .banner-info::before */
   display: flex;
   align-items: end;
-  font-size: 30px;
+  font-size: clamp(16px, 1.56vw, 30px);
   line-height: 1.27;
   font-weight: 700;
 }
 
 .banner-info::before {
   content: '';
-  /* Размер стрелки по макету */
-  width: 194px;
-  /* Если ширина и высота равны ипользую свойство aspect-ratio для идеально ровного соответсвия сторон 1 к 1*/
-  aspect-ratio: 1;
-  /* Адаптивный размер стрелки */
-  width: 10.1vw;
+  /* Размер стрелки по макету 194px делю на ширину макета 1920px и умножаю на 100, получаю 10.1*/
+  width: min(10.1vw, 194px);  /* Адаптивный размер стрелки во vw, но не будет выходить за рамки 194px */
+  aspect-ratio: 1;  /* Если ширина и высота равны ипользую свойство aspect-ratio для идеально ровного соответсвия сторон 1 к 1*/
   margin-right: 30px;
   /* Короткая запись для нижеследующих 4 свойств:
   background: url(./icons/bold-arrow-down-right.svg) center/contain no-repeat; */
