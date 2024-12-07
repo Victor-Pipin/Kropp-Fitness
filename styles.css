@@ -1,3 +1,4 @@
+
   @font-face {
     font-family: "Heebo";
     src: url(./fonts/Heebo-Light.woff2) format("woff2");
@@ -22,43 +23,44 @@
     font-display: swap;
   }
   
-  /**
-  Нормализация блочной модели
- */
+      /* # # # # # # # # # # # # #   Н   О   Р   М   А   Л   И   З   А   Ц   И   Я   # # # # # # # # # # # # #  */
+
+
+/* Нормализация блочной модели */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/**
-   Убираем внутренние отступы слева тегам списков,
-   у которых есть атрибут class
-  */
+
+/* Убираем внутренние отступы слева тегам списков, у которых есть атрибут class */
+
 :where(ul, ol):where([class]) {
   padding-left: 0;
 }
 
-/**
-   Убираем внешние отступы body и двум другим тегам,
-   у которых есть атрибут class
-  */
+
+/* Убираем внешние отступы body и двум другим тегам, у которых есть атрибут class */
+
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
 }
 
-/**
-   Убираем внешние отступы вертикали нужным тегам,
-   у которых есть атрибут class
-  */
+
+/* Убираем внешние отступы вертикали нужным тегам, у которых есть атрибут class */
+
 :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
 
+
 :where(dd[class]) {
   margin-left: 0;
 }
+
 
 :where(fieldset[class]) {
   margin-left: 0;
@@ -66,44 +68,43 @@ body,
   border: none;
 }
 
-/**
-   Убираем стандартный маркер маркированному списку,
-   у которого есть атрибут class
-  */
+
+/* Убираем стандартный маркер маркированному списку, у которого есть атрибут class */
+
 :where(ul[class]) {
   list-style: none;
 }
 
-/**
-   Обнуляем вертикальные внешние отступы параграфа,
-   объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
-  */
+
+/* Обнуляем вертикальные внешние отступы параграфа,
+объявляем локальную переменную для внешнего отступа вниз,
+чтобы избежать взаимодействие с более сложным селектором */
+
 p {
   --paragraphMarginBottom: 24px;
 
   margin-block: 0;
 }
 
-/**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
+
+/* Внешний отступ вниз для параграфа без атрибута class,
+который расположен не последним среди своих соседних элементов */
+
 p:where(:not([class]):not(:last-child)) {
   margin-bottom: var(--paragraphMarginBottom);
 }
 
-/**
-   Упрощаем работу с изображениями
-  */
+
+/* Упрощаем работу с изображениями */
+
 img {
   display: block;
   max-width: 100%;
 }
 
-/**
-   Наследуем свойства шрифт для полей ввода
-  */
+
+/* Наследуем свойства шрифт для полей ввода */
+
 input,
 textarea,
 select,
@@ -111,33 +112,24 @@ button {
   font: inherit;
 }
 
+
 html {
-  /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
+ /* Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта) */
+
   height: 100%;
-  /**
-     Плавный скролл
-    */
-  scroll-behavior: smooth;
+
+  scroll-behavior: smooth;   /* Плавный скролл */
 }
+
 
 body {
-  /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
-  min-height: 100%;
-  /**
-     Унифицированный интерлиньяж
-    */
-  line-height: 1.5;
+  min-height: 100%;   /* Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта) */
+  line-height: 1.5;  /* Унифицированный интерлиньяж */
 }
 
-/**
-   Приводим к единому цвету svg-элементы
-  */
+
+/* Приводим к единому цвету svg-элементы */
+
 svg *[fill] {
   fill: currentColor;
 }
@@ -145,17 +137,16 @@ svg *[stroke] {
   stroke: currentColor;
 }
 
-/**
-   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
-  */
+
+/* Чиним баг задержки смены цвета при взаимодействии с svg-элементами */
+
 svg * {
   transition-property: fill, stroke;
 }
 
-/**
-   Удаляем все анимации и переходы для людей,
-   которые предпочитают их не использовать
-  */
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -164,6 +155,10 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+
+
+      /* # # # # # # # # # # # # #   О Б Щ И Е   С Т И Л И   Д Л Я   П Р О Е К Т А   # # # # # # # # # # # # #  */
+
 
 /* Обращаюсь по псевдоклассу :root к корню страницы (элемент <html>) */
 
@@ -190,6 +185,7 @@ svg * {
   --transition-duration: 0.2s;
 }
 
+
 body {
   font-family: var(--font-family-base);
   font-weight: 300;
@@ -199,21 +195,26 @@ body {
   background-color: var(--color-dark);
 }
 
+
 a,
 button,
 input,
-textarea svg * {
+textarea,
+svg * {
   transition-duration: var(--transition-duration);
 }
+
 
 a {
   color: var(--color-light);
 }
 
 /* Меняю цвет ссылки при наведении */
+
 a:hover {
   color: var(--color-light-gray);
 }
+
 
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
@@ -221,8 +222,10 @@ a:hover {
   padding-inline: var(--container-padding-x);
 }
 
+
 /* Утилитарный класс, чтобы визуально скрыть содержимое, но оставить для скринридеров,
 для страховки для каждого свойства добавляю !important, чтобы перебить другие, возможные настройки */
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -236,6 +239,7 @@ a:hover {
   overflow: hidden !important;
 }
 
+
 h1,
 h2,
 h3,
@@ -245,6 +249,7 @@ h6 {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 
 button {
   /* для того, чтобы к кнопке применилось свойство высоты height. */
@@ -267,9 +272,13 @@ button {
 }
 
 /* Меняю цвет кнопки при наведении */
+
 .button:hover {
   background-color: var(--color-light-gray);
 }
+
+
+      /* # # # # # # # # # # # # #   С Т И Л И   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
 
 
 .header {
@@ -355,6 +364,59 @@ button {
 }
 
 
+/* Адаптив для Хедера страницы. */
+
+@media (max-width: 1024px) {
+  .header {
+    /* При уменьшении экрана позволяет элементам занимать место под соседним элементом
+  т.о. позволяет продолжить уменьшение экрана и отображение элемента. */
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-inline: 15px;
+  }
+
+  .header-menu {
+    /* Передвигаю навигацию в конец родителя на место кнопок, кнопки сдвигаются на место навигации. */
+    order: 1;
+    /* Чтобы сразу при адаптиве, элемент занимал следующую строчку */
+    flex-basis: 100%;
+  }
+
+  .header-menu-link {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  button {
+    padding-inline: 18px;
+  }
+  .header {
+    padding-top: 10px;
+  }
+
+  .header-menu-link {
+    height: 32px;
+  }
+
+  .header-menu-list {
+    column-gap: 24px;
+  }
+
+  .header-actions {
+    column-gap: 15px;
+  }
+
+  .header-burger-button {
+    padding-left: 4px;
+  }
+}
+
+
+      /* # # # # # # # # # # # # #   С Т И Л И   Д Л Я   B A N N E R   С Е К Ц И И   # # # # # # # # # # # # #  */
+
+
 .banner {
   display: flex;
   flex-direction: column;
@@ -436,53 +498,4 @@ border-radius: 50%;
 .banner-pagination-button:not(.is-current):hover::after {
   border-color: var(--color-light-gray);
   transition-duration: var(--transition-duration);
-}
-
-/* Адаптив для Хедера страницы. */
-
-@media (max-width: 1024px) {
-  .header {
-    /* При уменьшении экрана позволяет элементам занимать место под соседним элементом
-  т.о. позволяет продолжить уменьшение экрана и отображение элемента. */
-    flex-wrap: wrap;
-    row-gap: 10px;
-    padding-top: 20px;
-    padding-inline: 15px;
-  }
-
-  .header-menu {
-    /* Передвигаю навигацию в конец родителя на место кнопок, кнопки сдвигаются на место навигации. */
-    order: 1;
-    /* Чтобы сразу при адаптиве, элемент занимал следующую строчку */
-    flex-basis: 100%;
-  }
-
-  .header-menu-link {
-    height: 50px;
-  }
-}
-
-@media (max-width: 767px) {
-  button {
-    padding-inline: 18px;
-  }
-  .header {
-    padding-top: 10px;
-  }
-
-  .header-menu-link {
-    height: 32px;
-  }
-
-  .header-menu-list {
-    column-gap: 24px;
-  }
-
-  .header-actions {
-    column-gap: 15px;
-  }
-
-  .header-burger-button {
-    padding-left: 4px;
-  }
 }
