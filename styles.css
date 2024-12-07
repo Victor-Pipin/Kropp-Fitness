@@ -160,7 +160,7 @@ svg * {
       /* # # # # # # # # # # # # #   О Б Щ И Е   С Т И Л И   Д Л Я   П Р О Е К Т А   # # # # # # # # # # # # #  */
 
 
-/* Обращаюсь по псевдоклассу :root к корню страницы (элемент <html>) */
+/* Обращаюсь по псевдоклассу :root к корню страницы (элемент <html>) для объявления глобальных переменных проекта */
 
 :root {
   /* Создаём 5 переменных для 5 основных цветов страницы */
@@ -364,56 +364,6 @@ button {
 }
 
 
-/* Адаптив для Хедера страницы. */
-
-@media (max-width: 1024px) {
-  .header {
-    /* При уменьшении экрана позволяет элементам занимать место под соседним элементом
-  т.о. позволяет продолжить уменьшение экрана и отображение элемента. */
-    flex-wrap: wrap;
-    row-gap: 10px;
-    padding-top: 20px;
-    padding-inline: 15px;
-  }
-
-  .header-menu {
-    /* Передвигаю навигацию в конец родителя на место кнопок, кнопки сдвигаются на место навигации. */
-    order: 1;
-    /* Чтобы сразу при адаптиве, элемент занимал следующую строчку */
-    flex-basis: 100%;
-  }
-
-  .header-menu-link {
-    height: 50px;
-  }
-}
-
-@media (max-width: 767px) {
-  button {
-    padding-inline: 18px;
-  }
-  .header {
-    padding-top: 10px;
-  }
-
-  .header-menu-link {
-    height: 32px;
-  }
-
-  .header-menu-list {
-    column-gap: 24px;
-  }
-
-  .header-actions {
-    column-gap: 15px;
-  }
-
-  .header-burger-button {
-    padding-left: 4px;
-  }
-}
-
-
       /* # # # # # # # # # # # # #   С Т И Л И   Д Л Я   B A N N E R   С Е К Ц И И   # # # # # # # # # # # # #  */
 
 
@@ -435,6 +385,10 @@ button {
   /* Добавляю родителю display: flex, для того чтобы отобразился псевдоэлемент .banner-info::before */
   display: flex;
   align-items: end;
+
+  /* Три значения для размера текста: минимальное(16px) - ниже которого не опустится, чтобы текст оставался читаемым
+  рекомендуемое(1.56vw) - по формуле (30 (размер по макету(px)) / 1920 (ширина макета(px)) * 100 (ширины экрана(%)) = 1.56 (адаптивный(vw))),
+  максимальное(30px) - чтобы не превышал размер по макету в 30px */
   font-size: clamp(16px, 1.56vw, 30px);
   line-height: 1.27;
   font-weight: 700;
@@ -498,4 +452,68 @@ border-radius: 50%;
 .banner-pagination-button:not(.is-current):hover::after {
   border-color: var(--color-light-gray);
   transition-duration: var(--transition-duration);
+}
+
+
+      /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
+
+
+@media (max-width: 1024px) {
+
+      /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
+
+  .header {
+    /* При уменьшении экрана позволяет элементам занимать место под соседним элементом
+  т.о. позволяет продолжить уменьшение экрана и отображение элемента. */
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-inline: 15px;
+  }
+
+  .header-menu {
+    /* Передвигаю навигацию в конец родителя на место кнопок, кнопки сдвигаются на место навигации. */
+    order: 1;
+    /* Чтобы сразу при адаптиве, элемент занимал следующую строчку */
+    flex-basis: 100%;
+  }
+
+  .header-menu-link {
+    height: 50px;
+  }
+
+        /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   B A N N E R   С Е К Ц И И   # # # # # # # # # # # # #  */
+
+  .banner {
+    padding-inline: 15px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+      /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
+
+  button {
+    padding-inline: 18px;
+  }
+  .header {
+    padding-top: 10px;
+  }
+
+  .header-menu-link {
+    height: 32px;
+  }
+
+  .header-menu-list {
+    column-gap: 24px;
+  }
+
+  .header-actions {
+    column-gap: 15px;
+  }
+
+  .header-burger-button {
+    padding-left: 4px;
+  }
 }
