@@ -183,6 +183,8 @@ svg * {
   --container-padding-x: 15px;
 
   --transition-duration: 0.2s;
+
+  --header-height: 90px;
 }
 
 
@@ -287,6 +289,7 @@ button {
   align-items: center;
   /* Чтобы при уменьшении элементы не слипались */
   column-gap: 20px;
+  min-height: var(--header-height);
   padding-inline: 32px;
   background-color: var(--color-dark-alternate);
 }
@@ -308,7 +311,7 @@ button {
   display: inline-flex;
   align-items: center;
   column-gap: 7px;
-  height: 90px;
+  height: var(--header-height);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -371,7 +374,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: 985px;
+  min-height: calc(100vh - var(--header-height));   /* От 100% высоты экрана вычетается высота хедера, остаточную высоту занимает секция banner */
   padding: 36px 70px;
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
