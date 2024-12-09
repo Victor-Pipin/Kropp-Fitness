@@ -399,10 +399,12 @@ button {
 
 .banner-info::before {
   content: '';
-  /* Размер стрелки по макету 194px делю на ширину макета 1920px и умножаю на 100, получаю 10.1*/
-  width: min(10.1vw, 194px);  /* Адаптивный размер стрелки во vw, но не будет выходить за рамки 194px */
+  /* Три значения для размера псевдоэлемента: минимальное(60px) - ниже которого не опустится, чтобы стрелка оставалась выше текста
+  рекомендуемое(10.1vw) - по формуле (194 (размер по макету(px)) / 1920 (ширина макета(px)) * 100 (ширины экрана(%)) = 1.56 (адаптивный(vw))),
+  максимальное(194px) - чтобы не превышал размер по макету в 194px */
+  width: clamp(60px, 10.1vw, 194px);
   aspect-ratio: 1;  /* Если ширина и высота равны ипользую свойство aspect-ratio для идеально ровного соответсвия сторон 1 к 1*/
-  margin-right: 30px;
+  margin-right: 20px;
   /* Короткая запись для нижеследующих 4 свойств:
   background: url(./icons/bold-arrow-down-right.svg) center/contain no-repeat; */
   background-image: url(./icons/bold-arrow-down-right.svg);
@@ -412,13 +414,10 @@ button {
 }
 
 .banner-title {
-  line-height: 1;
-  /* Размер шрифта по макету */
-  font-size: 360px;
   /* Делаю адаптивный размер. Размер шрифта по макету 360px,
   делю на ширину макета 1920px и умножаю на 100, получаю 18,75 */
-  font-size: 18.75vw;
   font-size: min(18.75vw, 360px);
+  line-height: 1;
 }
 
 .banner-pagination-list {
@@ -518,5 +517,11 @@ border-radius: 50%;
 
   .header-burger-button {
     padding-left: 4px;
+  }
+
+        /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   B A N N E R   С Е К Ц И И   # # # # # # # # # # # # #  */
+
+  .banner-info::before {
+    margin-right: 10px;
   }
 }
