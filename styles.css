@@ -404,7 +404,7 @@ button {
   максимальное(194px) - чтобы не превышал размер по макету в 194px */
   width: clamp(60px, 10.1vw, 194px);
   aspect-ratio: 1;  /* Если ширина и высота равны ипользую свойство aspect-ratio для идеально ровного соответсвия сторон 1 к 1*/
-  margin-right: 20px;
+  margin: 0px 20px;
   /* Короткая запись для нижеследующих 4 свойств:
   background: url(./icons/bold-arrow-down-right.svg) center/contain no-repeat; */
   background-image: url(./icons/bold-arrow-down-right.svg);
@@ -488,6 +488,7 @@ border-radius: 50%;
 
   .banner {
     padding-inline: 15px;
+    row-gap: 10px;
   }
 }
 
@@ -521,7 +522,12 @@ border-radius: 50%;
 
         /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   B A N N E R   С Е К Ц И И   # # # # # # # # # # # # #  */
 
+  .banner-info {
+    margin-bottom: 5px;
+  }
+
   .banner-info::before {
     margin-right: 10px;
+    margin-left: 10px;
   }
 }
