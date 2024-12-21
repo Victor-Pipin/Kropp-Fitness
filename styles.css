@@ -217,6 +217,7 @@ a:hover {
   color: var(--color-light-gray);
 }
 
+/* Утилитарный класс контейнер с горизонтальными отступами и центрированием */
 
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
