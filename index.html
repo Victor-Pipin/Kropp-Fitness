@@ -93,6 +93,58 @@
           </ul>
         </div>
       </section>
+
+      <!-- Чтобы описать однотипные, повторяющиеся блоки,
+          секции 'motivation' в макете - использую ненумерованный список -->
+      <section class="motivation">
+        <!-- По аналогии секции 'banner' -->
+        <h2 class="visually-hidden">Motivation</h2>
+
+        <ul class="motivation-list">
+          <li class="motivation-item">
+            <!-- Обёртка для контента элемента 'li' (карточка) -->
+            <div class="motivation-card container">
+              <!-- Блок карточки, с текстовыми элементами и кнопкой -->
+              <div class="motivation-card-body">
+                <!-- Утилитарный класс 'backdrop-title' для стилизации встречающихся в макете,
+                  похожих заголовков с плюсиками и задним фоном в виде букв -->
+                <!-- Атрибут 'data-title' с помощью которго будут выводиться буквы 'STRONG' позади заголовка, через CSS -->
+                <h3
+                  class="mativation-card-title backdrop-title"
+                  data-title="Strong"
+                  >
+                  Be you, just stronger!<br/>
+                  Power is in you
+                </h3>
+                
+                <!-- Обёртка для тега 'p' у которого не будет класса, для 'WYSIWYG'-редакторов на уровне CMS,
+                стилизовать такой текст возможно через 'div'-обёртку -->
+                <div class="motivation-card-description">
+                  <p>Unum solum justo ex ius. Pro cu probo laboramus eius insolens euripidis te eos, ut agam tota.</p>
+                </div>
+
+                <!-- 1. Кнопка из макета реализованна через элемент ссылки <a>, так как ведёт на другую страницу -->
+                  <!-- 2. Значение атрибута href, указывает на корень страницы и при нажатии на ссылку
+                  будет переходить в начало страницы -->
+                  <!-- 3. Класс button стили для кнопок на странице, класс transparent модификатор класса button -->
+                <a class="mativation-card-button button transparent" href="/">
+                  View more
+                </a>
+              </div>
+
+              <!-- Картинка карточки -->
+              <img 
+                src="./images/motivation/1.jpg" 
+                alt="A man pulling up on a bar" 
+                class="motivation-card-image"
+                width="518"
+                height="760"
+                loading="lazy"
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
       </main>
 </body>
 </html>

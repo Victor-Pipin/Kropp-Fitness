@@ -254,7 +254,7 @@ h6 {
 }
 
 
-button {
+.button {
   /* для того, чтобы к кнопке применилось свойство высоты height. */
   display: inline-flex;
   align-items: center;
