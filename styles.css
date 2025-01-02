@@ -458,6 +458,15 @@ border-radius: 50%;
 }
 
 
+      /* # # # # # # # # # # # # #   С Т И Л И   Д Л Я   M O T I V A T I O N   С Е К Ц И И   # # # # # # # # # # # # #  */
+
+
+      /* При помощи псевдокласса :nth-child() со значением even обращаюсь ко всем чётным элементам(<li>) списка(<ul>) */
+      .motivation-item:nth-child(even) {
+        background-color: var(--color-dark-alternate);
+      }
+
+
       /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
 
