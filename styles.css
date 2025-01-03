@@ -508,7 +508,7 @@ border-radius: 50%;
 
       /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
 
-  button {
+  .button {
     padding-inline: 18px;
   }
   .header {
