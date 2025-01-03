@@ -467,6 +467,9 @@ border-radius: 50%;
         background-color: var(--color-dark-alternate);
       }
 
+      /* Контейнер с контентом для карточки(<li>) */
+      .motivation-card {}
+
 
       /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
