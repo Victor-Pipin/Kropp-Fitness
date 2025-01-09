@@ -467,6 +467,10 @@ border-radius: 50%;
         background-color: var(--color-dark-alternate);
       }
 
+      .motivation-item:nth-child(even) .motivation-card {
+        flex-direction: row-reverse;
+      }
+
       /* Обёртка-контейнер с контентом для карточки(<li>) */
       .motivation-card {
         display: flex;   /* Элементы становятся по оси-x(горизонталь) */
