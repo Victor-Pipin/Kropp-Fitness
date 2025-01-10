@@ -467,7 +467,7 @@ border-radius: 50%;
         background-color: var(--color-dark-alternate);
       }
 
-      /* Реверс(row-reverse) элементов, внутри чётных(even) пунктов(<li>) списка(<ul>) */
+      /* Реверс(row-reverse) расположения элементов, внутри чётных(even) пунктов(<li>) списка(<ul>) */
       .motivation-item:nth-child(even) .motivation-card {
         flex-direction: row-reverse;
       }
