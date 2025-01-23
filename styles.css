@@ -480,6 +480,10 @@ border-radius: 50%;
         column-gap: clamp(30px, 10.42vw, 200px);   /* Адаптивное растояние между элементами по горизонтали */
       }
 
+      .motivation-card-image {
+        margin-block: -60px;
+      }
+
 
       /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
