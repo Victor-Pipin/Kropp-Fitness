@@ -485,6 +485,10 @@ border-radius: 50%;
         margin-block: -60px;
       }
 
+      .motivation-card-body {
+        padding-left: 35px;
+      }
+
 
       /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
