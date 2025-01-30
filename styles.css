@@ -253,6 +253,9 @@ h6 {
   text-transform: uppercase;
 }
 
+/* Утилитарный класс для повторяющихся на странице заголовков с одинаковыми стилями */
+.title-medium {}
+
 
 .button {
   /* для того, чтобы к кнопке применилось свойство высоты height. */
@@ -487,6 +490,10 @@ border-radius: 50%;
 
       .motivation-card-body {
         padding-left: 35px;
+      }
+
+      .motivation-card-title {
+
       }
 
 
