@@ -262,8 +262,18 @@ h6 {
 
 /* Элемент с утилитарным класс 'backdrop-title' будет отображаться поверх псевдоэлемнтов применимых к нему */
 .backdrop-title {
-  position: relative; /* Без позиционирования свойство 'z-index' не работает */
+  position: relative; /* Без позиционирования свойство 'z-index' не работает, так же необходимо для позиционирования псевдоэлемента */
   z-index: 2; /* Элемент к которому будут добавляться псевдоэлементы будет распологаться поверх их */
+}
+
+.backdrop-title::before {
+  content: '';
+  display: block; /* Делает элемент блочным, предоставляет возможность задавать размеры, без этого элеменет не отобразится */
+  position: absolute; /* Позиционируется относительно родителя .backdrop-title */
+  right: calc(100% + 8px); /* 100% от правого края родителя, + 8px(по макету) выход за рамки родителя, псевдоэлемент окажется слева */
+  width: 26px;
+  aspect-ratio: 1;
+  background: url('./icons/plus.svg') center/contain no-repeat;
 }
 
 
@@ -420,8 +430,8 @@ h6 {
   aspect-ratio: 1;  /* Если ширина и высота равны ипользую свойство aspect-ratio для идеально ровного соответсвия сторон 1 к 1*/
   margin: 0px 20px;
   /* Короткая запись для нижеследующих 4 свойств:
-  background: url(./icons/bold-arrow-down-right.svg) center/contain no-repeat; */
-  background-image: url(./icons/bold-arrow-down-right.svg);
+  background: url('./icons/bold-arrow-down-right.svg') center/contain no-repeat; */
+  background-image: url('./icons/bold-arrow-down-right.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
