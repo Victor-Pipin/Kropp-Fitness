@@ -169,7 +169,7 @@ svg * {
   --color-dark-alternate: #131619;
   --color-light: #ffffff;
   --color-dark-gray: #404040;
-  --color-light-gray: #c4c4c4;
+  --color-light-gray: #C4C4C4;
 
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
@@ -266,7 +266,7 @@ h6 {
   z-index: 2; /* Элемент к которому будут добавляться псевдоэлементы будет распологаться поверх их */
 }
 
-/* Стили для псевдоэлемента - плюс, слева от заголовков */
+/* Стили для псевдоэлемента - плюс, слева от заголовков <h3> секции .motivation и т.д.*/
 .backdrop-title::before {
   content: '';
   display: block; /* Делает элемент блочным, предоставляет возможность задавать размеры, без этого элеменет не отобразится */
@@ -277,14 +277,18 @@ h6 {
   background: url('./icons/plus.svg') center/contain no-repeat;
 }
 
-/* Стили для псевдоэлемента - текст, под заголовками */
+/* Стили для псевдоэлемента - текст, под заголовками <h3> секции .motivation и т.д. */
 .backdrop-title::after {
-  content: attr(data-title); /* Значение для псевдоэлемента из data-атрибута расположенном в html-элементе */
+  content: attr(data-title); /* Значение для псевдоэлемента из data-атрибута расположенном в html-элементе(h3 .motivation) */
+  position: absolute; /* Относительно родителя .backdrop-title */
+  z-index: -1; /* Чтобы текст псевдоэлемента распологался за(под) текстом основного заголовка */
+  top: -0.45em;
+  left: -0.6em;
   font-family: var(--font-family-accent);
   font-size: 2.8em; /* Размер шрифта по макету 112px / размер шрифта родителя 40px = адаптивный размер потомка 2.8em */
   color: transparent;
   /* Обводка текста первая строка для - WebKit и Blink браузеров, вторая - для браузеров с поддержкой стандартного свойства */
-  -webkit-text-stroke: 1px var(--color-light-gray); /* Обводка текста, 1 значение - толщина обводки, 2 значение - цвет обводки */
+  -webkit-text-stroke: 0.3px var(--color-light-gray); /* Обводка текста, 1 значение - толщина обводки, 2 значение - цвет обводки */
   text-stroke: 1px var(--color-light-gray); /* Для браузеров с поддержкой стандартного свойства, когда станет стандартом */
 }
 
