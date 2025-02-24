@@ -218,6 +218,12 @@ p {
   margin-block: 0; /* Обнуление вертикальных margin, которые добавляет браузер по умолчанию к элементу <p> */
 }
 
+/* Комбинация псевдоклассов :not и :last-child, у элемента <p> будет нижний margin, если следующий элемент тоже <p>,
+так же это правило не будет работать для элементов <p> у которых нет классов(для WYSIWYG), благодаря :not([class]) */
+p:not([class]):not(:last-child) {
+  margin-bottom: 24px;
+}
+
 /* Утилитарный класс 'container' с горизонтальными отступами и центрированием */
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
