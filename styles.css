@@ -292,7 +292,7 @@ h6 {
   text-stroke: 1px var(--color-light-gray); /* Для браузеров с поддержкой стандартного свойства, когда станет стандартом */
 }
 
-
+/* Кнопка из хедера(height: 38px;) */
 .button {
   /* для того, чтобы к кнопке применилось свойство высоты height. */
   display: inline-flex;
@@ -314,9 +314,12 @@ h6 {
 }
 
 /* Меняю цвет кнопки при наведении */
-
 .button:hover {
   background-color: var(--color-light-gray);
+}
+
+.button.transparent {
+  height: var(--input-height);
 }
 
 
