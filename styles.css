@@ -306,6 +306,8 @@ h6 {
   line-height: 2;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  /* Удаление нативного подчеркивания в ссылках */
+  text-decoration: none;
   /* Чтобы текст в кнопке не перескавивал на новую строку при адаптиве. */
   white-space: nowrap;
   background-color: var(--color-light);
@@ -318,8 +320,13 @@ h6 {
   background-color: var(--color-light-gray);
 }
 
+/* Класс-модификатор(.transparent) для класса-кнопки(.button) */
 .button.transparent {
   height: var(--input-height);
+  padding-left: 31px;
+  padding-right: 80px;
+  background: transparent;
+  border: var(--border);
 }
 
 
