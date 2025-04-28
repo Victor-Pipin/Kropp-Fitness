@@ -347,6 +347,12 @@ h6 {
   right: 0;
 }
 
+/* Стили при наведении на прозрачную кнопку */
+.button.transparent:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light-gray);
+}
+
 
       /* # # # # # # # # # # # # #   С Т И Л И   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
 
