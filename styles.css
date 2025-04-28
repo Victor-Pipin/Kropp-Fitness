@@ -320,13 +320,31 @@ h6 {
   background-color: var(--color-light-gray);
 }
 
-/* Класс-модификатор(.transparent) для класса-кнопки(.button) */
+/* Класс-модификатор(.transparent) для класса-кнопки(.button) - прозрачная кнопка */
 .button.transparent {
+  /* Чтобы псевдоэлемент ::after, корректо позиционировался относительно своего места в родителе (не вылазил за рамки родителя) */
+  position: relative;
   height: var(--input-height);
   padding-left: 31px;
   padding-right: 80px;
   background: transparent;
   border: var(--border);
+}
+
+/* Стрелка вправо-вверх, внутри кнопки справа */
+.button.transparent::after {
+  content: '';
+  /* Относительно своего родителя - прозрачной-кнопки .button.transparent, по макету равна высоте родителя */
+  height: 100%;
+  /* Вычисляет высоту и задаёт этот же размер ширине, по макету высота/ширина - равны */
+  aspect-ratio: 1;
+  /* Фон псевдоэлемента svg-картинка (стрелка вправо-вверх), center/70% - отцентрован по центру x/y с шириной 70% */
+  background: url('./icons/arrow-top-right.svg') center/70% no-repeat;
+  border: var(--border);
+  border-radius: 50%;
+  /* Относительно родителя .button.transparent */
+  position: absolute;
+  right: 0;
 }
 
 
