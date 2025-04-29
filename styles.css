@@ -340,6 +340,7 @@ h6 {
   aspect-ratio: 1;
   /* Фон псевдоэлемента svg-картинка (стрелка вправо-вверх), center/70% - отцентрован по центру x/y с шириной 70% */
   background: url('./icons/arrow-top-right.svg') center/70% no-repeat;
+  /* Обводка, рамка вокруг стрелки */
   border: var(--border);
   border-radius: 50%;
   /* Относительно родителя .button.transparent */
@@ -579,7 +580,17 @@ border-radius: 50%;
       }
 
 
-      /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
+                   /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
+
+      @media (max-width: 1919px) {
+
+        /* # # # # # # # # # # #   А Д А П Т И В   Д Л Я   M O T I V A T I O N   С Е К Ц И И   # # # # # # # # # # #  */
+
+        .motivation-card-image {
+          /* Уменьшает заступ изображения на предыдущую секцию banner, чтобы не перекрывать пагинацию секции banner */
+          margin-block: -20px;
+        }
+      }
 
 
 @media (max-width: 1024px) {
