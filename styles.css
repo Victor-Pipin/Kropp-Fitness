@@ -687,4 +687,8 @@ border-radius: 50%;
   .motivation-item:nth-child(even) .motivation-card {
     flex-direction: column-reverse;
   }
+
+  .motivation-card-image {
+    min-width: 60%;
+  }
 }
