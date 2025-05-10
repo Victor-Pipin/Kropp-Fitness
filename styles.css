@@ -627,7 +627,7 @@ border-radius: 50%;
   /* # # # # # # # # # # #   А Д А П Т И В   Д Л Я   M O T I V A T I O N   С Е К Ц И И   # # # # # # # # # # #  */
 
   .motivation-card {
-    /* Убираю слипание контента с нижней и верхней границей */
+    /* Убираю слипание контента с нижней и верхней границами */
     padding-block: 50px;
   }
 
@@ -678,5 +678,13 @@ border-radius: 50%;
   .banner-info::before {
     margin-right: 10px;
     margin-left: 10px;
+  }
+
+  /* # # # # # # # # # # #   А Д А П Т И В   Д Л Я   M O T I V A T I O N   С Е К Ц И И   # # # # # # # # # # #  */
+
+  /* Стили для двух карточек секции */
+  .motivation-card,
+  .motivation-item:nth-child(even) .motivation-card {
+    flex-direction: column-reverse;
   }
 }
