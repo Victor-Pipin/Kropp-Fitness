@@ -696,4 +696,8 @@ border-radius: 50%;
   .motivation-card-image {
     max-width: 60%;
   }
+
+  .motivation-card-description:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
