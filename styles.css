@@ -592,6 +592,19 @@ border-radius: 50%;
         }
       }
 
+      @media (max-width: 1366px) {
+
+        /* # # # # # # # # # # #   А Д А П Т И В   Д Л Я   M O T I V A T I O N   С Е К Ц И И   # # # # # # # # # # #  */
+
+        .motivation-card-image {
+          max-width: 40%;
+          height: auto;
+          padding: 30px;
+          /* Убирает заступ изображения на соседнюю секцию */
+          margin-block: 0;
+        }
+      }
+
 
 @media (max-width: 1024px) {
 
