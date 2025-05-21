@@ -587,6 +587,8 @@ border-radius: 50%;
         max-width: 1920px;
         /* Центрирование секции по горизонтали */
         margin-inline: auto;
+        padding-top: 70px;
+        padding-bottom: 120px;
       }
 
 
