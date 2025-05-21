@@ -580,6 +580,16 @@ border-radius: 50%;
       }
 
 
+      /* # # # # # # # # # #   С Т И Л И   Д Л Я   T R A I N I N G - T Y P E S   С Е К Ц И И   # # # # # # # # # #  */
+
+
+      .training-types {
+        max-width: 1920px;
+        /* Центрирование секции по горизонтали */
+        margin-inline: auto;
+      }
+
+
                    /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
       @media (max-width: 1919px) {
