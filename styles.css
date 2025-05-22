@@ -584,11 +584,15 @@ border-radius: 50%;
 
 
       .training-types {
+        /* Убираю для секции нативное позиционирование(position: static), чтобы скрыть заступающую картинку из секции выше */
+        position: relative;
         max-width: 1920px;
         /* Центрирование секции по горизонтали */
         margin-inline: auto;
         padding-top: 70px;
         padding-bottom: 120px;
+        /* Скрываю заступающую картинку из секции выше */
+        background-color: var(--color-dark);
       }
 
 
