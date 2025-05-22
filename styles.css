@@ -595,6 +595,14 @@ border-radius: 50%;
         background-color: var(--color-dark);
       }
 
+      .training-types-list {
+        display: grid;
+        /* grid-template-columns - как будут размещаться колонки, repeat(6, 1fr) - 6 колонок, 1fr - каждая занимает равную часть */
+        grid-template-columns: repeat(6, 1fr);
+        /* Общий промежуток (горизонт, вертикаль), горизонт - понадобится при перестроении сетки в адаптиве */
+        gap: 60px;
+      }
+
 
                    /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
