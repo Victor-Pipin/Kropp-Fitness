@@ -611,6 +611,8 @@ border-radius: 50%;
         flex-direction: column;
         align-items: center;
         row-gap: 32px;
+        /* Добавляю стрелку фоном: 100%(слева на право по оси - x), 0(сверху в низ по оси - y), /80px(размер фона(иконки в url)) */
+        background: url(./icons/transparent-arrow-bottom-left.svg) 100% 0/80px no-repeat;
       }
 
       /* Заголовок в элементе списка */
