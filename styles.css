@@ -607,12 +607,18 @@ border-radius: 50%;
 
       /* Элемент списка */
       .training-types-item {
+        /* Переменная с размером svg-стрелки и верхнего паддинга */
+        --traingTypesItemBgIconSize: 80px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 32px;
-        /* Добавляю стрелку фоном: 100%(слева на право по оси - x), 0(сверху в низ по оси - y), /80px(размер фона(иконки в url)) */
-        background: url(./icons/transparent-arrow-bottom-left.svg) 100% 0/80px no-repeat;
+        padding-top: 80px;
+        /* Смещаю контент вниз на 80px, относительно svg-стрелки на фоне, как в макете */
+        padding-top: var(--traingTypesItemBgIconSize);
+        /* Добавляю стрелку фоном: 100%(слева на право по оси - x), 0(сверху в низ по оси - y), /var()(размер фона(иконки из url)) */
+        background: url(./icons/transparent-arrow-bottom-left.svg) 100% 0/var(--traingTypesItemBgIconSize) no-repeat;
       }
 
       /* Заголовок в элементе списка */
