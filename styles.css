@@ -614,7 +614,6 @@ border-radius: 50%;
         flex-direction: column;
         align-items: center;
         row-gap: 32px;
-        padding-top: 80px;
         /* Смещаю контент вниз на 80px, относительно svg-стрелки на фоне, как в макете */
         padding-top: var(--traingTypesItemBgIconSize);
         /* Добавляю стрелку фоном: 100%(слева на право по оси - x), 0(сверху в низ по оси - y), /var()(размер фона(иконки из url)) */
@@ -639,6 +638,7 @@ border-radius: 50%;
         }
       }
 
+
       @media (max-width: 1366px) {
 
         /* # # # # # # # # # # #   А Д А П Т И В   Д Л Я   M O T I V A T I O N   С Е К Ц И И   # # # # # # # # # # #  */
@@ -653,7 +653,18 @@ border-radius: 50%;
       }
 
 
-@media (max-width: 1024px) {
+      @media (max-width: 1280px) {
+
+        /* # # # # # # # # # #   А Д А П Т И В   Д Л Я   T R A I N I N G - T Y P E S   С Е К Ц И И   # # # # # # # # # #  */
+
+        .training-types-list {
+          /* Уменьшаю количество колонок в ряду с 6 до 3, остальные 3 перемещаются в низ на следующий ряд колонок */
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+
+      @media (max-width: 1024px) {
 
       /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
 
@@ -702,7 +713,7 @@ border-radius: 50%;
 }
 
 
-@media (max-width: 767px) {
+      @media (max-width: 767px) {
 
       /* # # # # # # # # # # # # #   А Д А П Т И В   Д Л Я   Х Е Д Е Р А   С Т Р А Н И Ц Ы   # # # # # # # # # # # # #  */
 
