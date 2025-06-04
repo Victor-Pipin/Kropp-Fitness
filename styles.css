@@ -660,6 +660,7 @@ border-radius: 50%;
         .training-types-list {
           /* Уменьшаю количество колонок в ряду с 6 до 3, остальные 3 перемещаются в низ на следующий ряд колонок */
           grid-template-columns: repeat(3, 1fr);
+          gap: 45px;
         }
       }
 
@@ -777,5 +778,6 @@ border-radius: 50%;
   .training-types-list {
     /* Уменьшаю количество колонок в ряду до 2, остальные 4 колонки перемещаются в низ на следующие 2 ряда колонок */
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
