@@ -784,5 +784,7 @@ border-radius: 50%;
   .training-types-item {
     /* Уменьшаю фоновую svg стрелку */
     --trainingTypesItemBgIconSize: 50px;
+    /* Уменьшаю расстотояние по вертикали между элементами */
+    row-gap: 10px;
   }
 }
