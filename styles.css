@@ -662,6 +662,11 @@ border-radius: 50%;
           grid-template-columns: repeat(3, 1fr);
           gap: 45px;
         }
+
+        .training-types-image {
+          /* Уменьшаю ширину svg-изображения */
+          max-width: 135px;
+        }
       }
 
 
@@ -784,7 +789,12 @@ border-radius: 50%;
   .training-types-item {
     /* Уменьшаю фоновую svg стрелку */
     --trainingTypesItemBgIconSize: 50px;
-    /* Уменьшаю расстотояние по вертикали между элементами */
+    /* Уменьшаю расстотояние между элементами по вертикали */
     row-gap: 10px;
+  }
+
+  .training-types-image {
+    /* Уменьшаю ширину svg-изображения */
+    max-width: 120px;
   }
 }
