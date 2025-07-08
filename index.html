@@ -231,7 +231,16 @@
               fill the form below to start your journey
             </div>
           </header>
-          <div class="join-us-form-body"></div>
+          <div class="join-us-form-body">
+            <!-- Для того, чтобы поле input было доступным добавляю метку с помощью элемента label 
+              и связываю ее с input через атрибуты id и for -->
+            <label class="visually-hidden" for="username">Name</label>
+            <input 
+              class="join-us-form input"
+              id="username"
+              placeholder="Name"
+            >
+          </div>
         </form>
       </div>
     </section>
