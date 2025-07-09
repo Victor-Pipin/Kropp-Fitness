@@ -232,13 +232,19 @@
             </div>
           </header>
           <div class="join-us-form-body">
-            <!-- Для того, чтобы поле input было доступным добавляю метку с помощью элемента label 
+            <!-- Для того, чтобы поле input в форме было доступным добавляю метку с помощью элемента label 
               и связываю ее с input через атрибуты id и for -->
             <label class="visually-hidden" for="username">Name</label>
             <input 
-              class="join-us-form input"
+              class="join-us-form-input input"
               id="username"
               placeholder="Name"
+            >
+            <label class="visually-hidden" for="email">Email</label>
+            <input 
+              class="join-us-form-input input"
+              id="email"
+              placeholder="Email"
             >
           </div>
         </form>
