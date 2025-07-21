@@ -626,6 +626,15 @@ border-radius: 50%;
       }
 
 
+      /* # # # # # # # # # #   С Т И Л И   Д Л Я   J O I N - U S   С Е К Ц И И   # # # # # # # # # #  */
+
+
+      /* Враппер для видео секции */
+      .join-us-video-wrapper {
+        background: url(./images/join-us-bg.jpg) center/cover no-repeat;
+      }
+
+
                    /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
       @media (max-width: 1919px) {
