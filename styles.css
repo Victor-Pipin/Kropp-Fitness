@@ -631,7 +631,8 @@ border-radius: 50%;
 
       /* Враппер для видео секции */
       .join-us-video-wrapper {
-        background: url(./images/join-us-bg.jpg) center/cover no-repeat;
+        /* Запасной цвет фона var(--color-dark-alternate), если изображение не загрузилось */
+        background: url(./images/join-us-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
       }
 
 
