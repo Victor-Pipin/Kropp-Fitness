@@ -633,6 +633,7 @@ border-radius: 50%;
       .join-us-video-wrapper {
         /* Запасной цвет фона var(--color-dark-alternate), если изображение не загрузилось */
         background: url(./images/join-us-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
+        padding: 150px 480px;
       }
 
 
