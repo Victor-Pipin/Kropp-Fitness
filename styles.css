@@ -631,6 +631,10 @@ border-radius: 50%;
 
       /* Враппер для видео секции */
       .join-us-video-wrapper {
+        /* Центрирую содержимое видео-враппера ось x - justify-content: center, ось y - align-items: center */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         /* Запасной цвет фона var(--color-dark-alternate), если изображение не загрузилось */
         background: url(./images/join-us-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
         padding: 150px 480px;
