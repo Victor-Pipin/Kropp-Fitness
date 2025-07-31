@@ -631,6 +631,8 @@ border-radius: 50%;
 
       /* Враппер для видео секции */
       .join-us-video-wrapper {
+        /* Родительская обёртка для абсолютного позиционирования кнопки проигрывания видео */
+        position: relative;
         /* Центрирую содержимое видео-враппера ось x - justify-content: center, ось y - align-items: center */
         display: flex;
         justify-content: center;
@@ -638,6 +640,16 @@ border-radius: 50%;
         /* Запасной цвет фона var(--color-dark-alternate), если изображение не загрузилось */
         background: url(./images/join-us-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
         padding: 150px 480px;
+      }
+
+      /* Кнопка проигрывания видео */
+      .join-us-video-play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* Позволяет позиционировать по центру внутри родительского элемента, благодаря смещению относительно собственного
+        верхнего левого угла, после применения top: 50% и left: 50% именно верхний, левый угол находится по центру */
+        translate: -50% -50%;
       }
 
 
