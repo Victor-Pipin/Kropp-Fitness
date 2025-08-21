@@ -666,6 +666,14 @@ border-radius: 50%;
         border-radius: 50%;
       }
 
+      /* Псевдоэлемент стрелка в правый верхний угол, которая находится в кнопке проигрывания видео после слова play */
+      .join-us-video-play-button::after {
+        content: '';
+        width: 26px;
+        aspect-ratio: 1;
+        background: url('./icons/arrow-top-right.svg') center/contain no-repeat;
+      }
+
 
                    /* # # # # # # # # # # # # #   А   Д   А   П   Т   И   В  # # # # # # # # # # # # #  */
 
